@@ -1,0 +1,26 @@
+{
+  "private": true,
+  "name": "awesome-ppx-reasonml",
+  "scripts": {
+    "format": "prettier --write",
+    "generate-toc": "markdown-toc -i"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.md": [
+      "npm run generate-toc",
+      "npm run format",
+      "git add"
+    ]
+  },
+  "devDependencies": {
+    "husky": "^1.3.1",
+    "lint-staged": "^8.1.0",
+    "markdown-toc": "^1.2.0",
+    "prettier": "^1.15.3"
+  }
+}
